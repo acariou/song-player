@@ -5,3 +5,6 @@ dist
 bower_components
 test/bower_components
 .idea/*
+
+song-player.sublime-project
+song-player.sublime-workspace
