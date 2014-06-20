@@ -28,5 +28,9 @@ rvm install 1.9.3
 rvm use 1.9.3  --default
 </code></pre> 
 
-Mise à jour de rubygem
+Mise à jour de rubygem ...
+
+### Lancement 
+
+<pre><code>grunt serve</code></pre> 
 
