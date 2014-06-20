@@ -13,13 +13,13 @@ var songPlayer = (function($) {
         this.$el = $(el);
         
         this.init = function () {
-            console.log(this.$el);
+            //console.log(this.$el);
             this._create();
         };
         this._create = function () {
             var player = document.querySelectorAll(this.el);
             console.log(player);
-            player.pause();
+            player[0].pause();
         };
         
         return this.init();
