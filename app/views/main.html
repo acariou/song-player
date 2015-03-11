@@ -1,0 +1,23 @@
+<p>Actualiser (en secondes) : <input ng-model="refreshInterval"></p>
+
+<h3>Ajouter un nouveau flux</h3>
+
+<form name="newFeed" novalidate>
+    URL : <input size="80" name="url" ng-model="newsFeed.url" type="url" required>
+    <button ng-click="addFeed(newsFeed)">Ajouter un flux</button>
+    <span class="error" ng-show="newFeed.$error.required">Requis !</span>
+    <span class="error" ng-show="newFeed.$error.url">Format d'url invalide !</span>
+</form>
+
+<hr>
+
+<div ng-repeat="feed in feeds">
+    <!--p>{{ feed }}</p-->
+    <ul>
+        <li ng-repeat="item in feed.items"><a href="{{ item.link.href }}">{{ item.title }}</a> </li>
+    </ul>
+    URL : <input size="80" ng-model="feed.url">
+    <button ng-click="fetchFeed(feed)">Actualiser</button>
+    <button ng-click="deleteFeed(feed)">Supprimer</button>
+    <hr/>
+</div>

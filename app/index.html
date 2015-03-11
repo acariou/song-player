@@ -1,126 +1,50 @@
 <!doctype html>
-<html class="no-js">
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <title>song player</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
 
     </head>
-    <body>
-        <figure id="audioplayer" itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
-            <figcaption>
-                <div>Track <span itemprop="name">trackName</span></div>
-                <div id="album">Album <span itemprop="inAlbum"></span></div>
-                <div id="artist">Artist <span itemprop="byArtist">BotlellneckJohn</span></div>
-                <div id="time">Time<span id="playbacktime">00:00</span></div>
-            </figcaption>
-            <meta itemprop="duration" content="PT2M29S">
-            <div id="fader"></div>
-            <div id="playback"></div>
-            <audio src="medias/01-rainbowblues.mp3" controls id="audiotrack" preload="auto" itemprop="audio"></audio>
-        </figure>
+    <body ng-app="songPlayerApp">
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser</a> or  <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">Install Google Chrome Frame</a></p>
+    <![endif]-->
 
-        <figure id="audioplayer2">
-            <audio src="medias/204535_2244250-lq.mp3" controls id="audiotrack2"></audio>
-        </figure>
+    <!--[if lt IE 9]>
+    <script src="components/es5-shim/es5-shim.js"></script>
+    <script src="components/json3/lib/json3.min.js"></script>
+    <![endif]-->
 
+    <!-- Add your site or application content here -->
+    <div class="container" ng-view></div>
 
-        <script>
-            function songPlayer(contener,el) {
-                this.contener = contener;
-                this.el = el;
-                this.audioPlayer = document.getElementById(this.contener);
-                this.audioTrack = document.getElementById(this.el);
-                this.playButton = document.createElement('button');
-                this.muteButton = document.createElement('button');
-                this.volumeSlider = document.createElement('input');
+    <script src="components/jquery/dist/jquery.js"></script>
+    <script src="components/angular/angular.js"></script>
+    <script src="components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="components/angular-animate/angular-animate.js"></script>
+    <script src="components/angular-aria/angular-aria.js"></script>
+    <script src="components/angular-cookies/angular-cookies.js"></script>
+    <script src="components/angular-messages/angular-messages.js"></script>
+    <script src="components/angular-resource/angular-resource.js"></script>
+    <script src="components/angular-route/angular-route.js"></script>
+    <script src="components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-                var self = this;
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <!-- endbuild -->
 
-                this.player = function() {
-
-                    if ( self.audioTrack.paused ) {
-                        self._setText(self.playButton, 'Pause');
-                        self.audioTrack.play();
-                    } else {
-                        self._setText(self.playButton, 'Play');
-                        self.audioTrack.pause();
-                    }
-                };
-
-                this.muter = function () {
-                    if ( self.audioTrack.volume == 0 ) {
-                        self.audioTrack.volume = restorValue;
-                        self.volumeSlider.value = restorValue;
-                    } else {
-                        self.audioTrack.volume = 0;
-                        restorValue = self.volumeSlider.value;
-                        self.volumeSlider.value = 0;
-                    }
-                };
-
-                this.volumizer = function () {
-                    if ( self.audioTrack.volume === 0 ) {
-                        self._setText(self.muteButton, 'Unmute');
-                    } else {
-                        self._setText(self.muteButton, 'Mute');
-                    }
-                };
-
-                this.finish = function () {
-                    self.audioTrack.currentTime = 0;
-                    self._setText(self.playButton, 'Play');
-                };
-            }
-
-            songPlayer.prototype = {
-                init: function() {
-                    var self = this;
-
-                    self._create(self.audioPlayer, self.audioTrack);
-
-                    self.playButton.addEventListener('click', self.player, false);
-                    self.muteButton.addEventListener('click', self.muter, false);
-                    self.volumeSlider.addEventListener('input', function(){
-                        self.audioTrack.volume = self.volumeSlider.value;
-                    }, false);
-                    self.audioTrack.addEventListener('volumechange', self.volumizer, false);
-                    self.audioTrack.addEventListener('ended', self.finish, false);
-                },
-                _create: function(audioPlayer, audioTrack) {
-                    var self = this;
-
-                    self._setAttributes(self.playButton, {'type': 'button'});
-                    self._setAttributes(self.muteButton, {'type': 'button'});
-                    self._setAttributes(self.volumeSlider, {"type": "range", "min": "0", "max": "1", "step": "any", "value": "1"});
-
-                    self._setText(self.playButton, "Play");
-                    self._setText(self.muteButton, "Mute");
-
-                    audioPlayer.appendChild(self.playButton);
-                    audioPlayer.appendChild(self.muteButton);
-                    audioPlayer.appendChild(self.volumeSlider);
-
-                    audioTrack.removeAttribute('controls');
-                },
-                _setText: function (el, text) {
-                    el.innerHTML = text;
-                },
-                _setAttributes: function (el, attrs) {
-                    for (var key in attrs) {
-                        el.setAttribute(key, attrs[key]);
-                    }
-                }
-            };
-
-            var MyPlayer = new songPlayer('audioplayer','audiotrack');
-            MyPlayer.init();
-
-            var MyPlayer2 = new songPlayer('audioplayer2','audiotrack2');
-            MyPlayer2.init();
-
-        </script>
     </body>
 </html>
