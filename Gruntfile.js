@@ -7,37 +7,67 @@ module.exports = function (grunt) {
 
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
+    var config = {
+        app: 'app',
+        dist: 'dist'
+    };
 
     // Define the configuration for all the tasks
     grunt.initConfig({
+        config: config,
         watch:{
-            scripts: {
-                files: ['**.*']
+            js: {
+                files: ['<%= config.app %>/scripts/{,*/}*.js'],
+                options: {
+                    livereload: true
+                }
+            },
+            gruntfile: {
+                files: ['Gruntfile.js']
+            },
+            livereload: {
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                },
+                files: [
+                    '<%= config.app %>/{,*/}*.html',
+                    '<%= config.app %>/{,*/}*.*'
+                ]
             }
         },
         connect: {
-            dist:{
+            options: {
+                port: 9000,
+                open: true,
+                livereload: 35729,
+                hostname: 'localhost'
+            },
+            livereload: {
                 options: {
-                    base:__dirname,
-                    port: 9000,
-                    open: true,
-                    livereload: 35729,
-                    hostname: 'localhost',
-                    keepalive: true,
                     middleware: function(connect) {
                         return [
                             connect.static('.tmp'),
                             connect().use('/medias', connect.static('./medias')),
-                            connect.static(__dirname)
+                            connect.static(config.app)
                         ];
                     }
+                }
+            },
+            dist:{
+                options: {
+                    base:'<%= config.dist %>',
+                    livereload: false
                 }
             }
         }
     });
 
     grunt.registerTask('serve', function (target) {
-        grunt.task.run(['connect','watch']);
+        if (target === 'dist') {
+            return grunt.task.run(['connect:dist:keepalive']);
+        }
+        console.log(config.app);
+        grunt.task.run(['connect:livereload','watch']);
     });
 
 
