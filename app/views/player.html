@@ -1,20 +1,21 @@
 <figure id="audioplayer" itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
     <figcaption>
-        <div>Track <span itemprop="name">trackName</span></div>
-        <div id="album">Album <span itemprop="inAlbum"></span></div>
-        <div id="artist">Artist <span itemprop="byArtist">BotlellneckJohn</span></div>
+        <div>Track <span itemprop="name">{{ track.name }}</span></div>
+        <div id="album">Album <span itemprop="inAlbum">{{ track.album.name }}</span></div>
+        <div id="artist">Artist <span itemprop="byArtist">{{ track.artist.name }}</span></div>
         <div id="time">Time<span id="playbacktime">00:00</span></div>
     </figcaption>
     <meta itemprop="duration" content="PT2M29S">
-    <div id="fader"></div>
-    <div id="playback"></div>
+    <div id="fader">
+        <input type="range" min="0" max="1" step="any" value="1" id="volumeSlider" orient="vertical">
+        <button type="button">volumehigh</button>
+    </div>
+    <div id="playback">
+        <button type="button">Play</button>
+        <progress min="0" max="100" value="0" id="playhead"></progress>
+    </div>
     <audio src="medias/01-rainbowblues.mp3" controls id="audiotrack" preload="auto" itemprop="audio"></audio>
 </figure>
-
-<figure id="audioplayer2">
-    <audio src="medias/204535_2244250-lq.mp3" controls id="audiotrack2"></audio>
-</figure>
-
 
 <script>
     function songPlayer(contener,el) {
@@ -22,9 +23,13 @@
         this.el = el;
         this.audioPlayer = document.getElementById(this.contener);
         this.audioTrack = document.getElementById(this.el);
+        this.fader = document.getElementById("fader");
+        this.playback = document.getElementById("playback");
+        this.playbackTime = document.getElementById("playbacktime");
         this.playButton = document.createElement('button');
         this.muteButton = document.createElement('button');
         this.volumeSlider = document.createElement('input');
+        this.playhead = document.getElementById('playhead');
 
         var self = this;
 
@@ -62,11 +67,21 @@
             self.audioTrack.currentTime = 0;
             self._setText(self.playButton, 'Play');
         };
+
+        this.updatePlayhead = function () {
+            self.playhead.value = self.audioTrack.currentTime;
+            var s = parseInt(self.audioTrack.currentTime % 60);
+            var m = parseInt((self.audioTrack.currentTime / 60) % 60);
+            s = (s >= 10) ? s : "0" + s;
+            m = (m >= 10) ? m : "0" + m;
+            self.playbacktime.innerHTML = m + ':' + s ;
+        }
     }
 
     songPlayer.prototype = {
         init: function() {
-            var self = this;
+            var self = this,
+                duration = self.audioTrack.duration;
 
             self._create(self.audioPlayer, self.audioTrack);
 
@@ -77,20 +92,40 @@
             }, false);
             self.audioTrack.addEventListener('volumechange', self.volumizer, false);
             self.audioTrack.addEventListener('ended', self.finish, false);
+            self.audioTrack.addEventListener('playing', function(){
+                self.playhead.max = self.audioTrack.duration;
+            }, false);
+            self.audioTrack.addEventListener('timeupdate', self.updatePlayhead, false);
         },
         _create: function(audioPlayer, audioTrack) {
             var self = this;
 
-            self._setAttributes(self.playButton, {'type': 'button'});
-            self._setAttributes(self.muteButton, {'type': 'button'});
-            self._setAttributes(self.volumeSlider, {"type": "range", "min": "0", "max": "1", "step": "any", "value": "1"});
+            self._setAttributes(self.playButton, {'type': 'button', "class": "ss-icon"});
+            self._setAttributes(self.muteButton, {'type': 'button', "class": "ss-icon"});
+            self._setAttributes(self.volumeSlider, {
+                "type": "range",
+                "min": "0",
+                "max": "1",
+                "step": "any",
+                "value": "1",
+                "orient": "vertical",
+                "id": "volumeSlider"
+            });
+            self._setAttributes(self.playhead, { "min": "0", "max": "100", "value": "0", "id": "playhead" });
 
             self._setText(self.playButton, "Play");
             self._setText(self.muteButton, "Mute");
 
+            self.muteButton.style.display = "block";
+            self.muteButton.style.margin = "0 auto";
+
             audioPlayer.appendChild(self.playButton);
             audioPlayer.appendChild(self.muteButton);
             audioPlayer.appendChild(self.volumeSlider);
+            self.fader.appendChild(self.volumeSlider);
+            self.fader.appendChild(self.muteButton);
+            self.playback.appendChild(self.playButton);
+            self.playback.appendChild(self.playhead);
 
             audioTrack.removeAttribute('controls');
         },
@@ -106,8 +141,5 @@
 
     var MyPlayer = new songPlayer('audioplayer','audiotrack');
     MyPlayer.init();
-
-    var MyPlayer2 = new songPlayer('audioplayer2','audiotrack2');
-    MyPlayer2.init();
 
 </script>

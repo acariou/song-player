@@ -1,17 +1,14 @@
 'use strict';
 
 module.exports = function (grunt) {
-
     // Charge Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
-
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
     var config = {
         app: require('./bower.json').appPath || 'app',
         dist: 'dist'
     };
-
     // Define the configuration for all the tasks
     grunt.initConfig({
         config: config,
@@ -28,7 +25,10 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             },
-            //jstest: {files: ['test/spec/{,*/}*.js'],tasks: ['newer:jshint:test', 'karma']},
+            jstest: {
+                files: ['test/spec/{,*/}*.js'],
+                tasks: ['newer:jshint:test', 'karma']
+            },
             compass: {
                 files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer']
@@ -36,8 +36,6 @@ module.exports = function (grunt) {
             gruntfile: {
                 files: ['Gruntfile.js']
             },
-            // Voir si encore utile
-            //sass: {files: ['sass/{,*/}*.{scss,sass}'],tasks: ['sass:server', 'autoprefixer']},
             styles: {
                 files: ['<%= config.app %>/styles/{,*/}*.css'],
                 tasks: ['newer:copy:styles', 'autoprefixer']
@@ -66,8 +64,8 @@ module.exports = function (grunt) {
                     middleware: function(connect) {
                         return [
                             connect.static('.tmp'),
-                            //connect().use('<%= config.app %>/components', connect.static('./components')),
-                            //connect().use('<%= config.app %>/styles', connect.static('./styles')),
+                            connect().use('/app/components', connect.static('./components')),
+                            connect().use('/app/styles', connect.static('./styles')),
                             connect().use('app/medias', connect.static('./medias')),
                             connect.static(config.app)
                         ];
@@ -127,20 +125,40 @@ module.exports = function (grunt) {
                 src: ['test/spec/{,*/}*.js']
             }
         },
-        // Mocha testing framework configuration options
-        //mocha: {all: {options: {run: true,urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']}}},
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
+            //dist: {options: {config: 'config.rb'}},
+            options: {
+                sassDir: 'sass',
+                cssDir: '<%= config.app %>/styles',
+                generatedImagesDir: '.tmp/images/generated',
+                imagesDir: '<%= config.app %>/images',
+                javascriptsDir: '<%= config.app %>/scripts',
+                fontsDir: '<%= config.app %>/styles/fonts',
+                importPath: '<%= config.app %>/components',
+                httpImagesPath: '/images',
+                httpGeneratedImagesPath: '/images/generated',
+                httpFontsPath: '/styles/fonts',
+                relativeAssets: false,
+                assetCacheBuster: false,
+                raw: 'Sass::Script::Number.precision = 10\n'
+            },
             dist: {
                 options: {
-                    config: 'config.rb'
+                    generatedImagesDir: '<%= config.dist %>/images/generated'
+                }
+            },
+            server: {
+                options: {
+                    sourcemap: true
+                }
+            },
+            bootstrap: {
+                options: {
+                    sassDir: '<%= config.app %>/components/bootstrap-sass-official/assets/stylesheets',
+                    cssDir: '<%= config.app %>/styles'
                 }
             }
-            //,
-            //options: {sassDir: '<%= config.app %>/styles',cssDir: '.tmp/styles',generatedImagesDir: '.tmp/images/generated',imagesDir: '<%= config.app %>/images',javascriptsDir: '<%= config.app %>/scripts',fontsDir: '<%= config.app %>/styles/fonts',importPath: '<%= config.app %>/components',httpImagesPath: '/images',httpGeneratedImagesPath: '/images/generated',httpFontsPath: '/styles/fonts',relativeAssets: false,assetCacheBuster: false,raw: 'Sass::Script::Number.precision = 10\n'},
-            //dist: {options: {generatedImagesDir: '<%= config.dist %>/images/generated'}},
-            //server: {options: {sourcemap: true}},
-            //bootstrap: {options: {sassDir: '<%= config.app %>/components/bootstrap-sass-official/assets/stylesheets',cssDir: '.tmp/styles'}}
         },
         // Add vendor prefixed styles
         autoprefixer: {
@@ -153,17 +171,17 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: '.tmp/styles/',
+                    cwd: '<%= config.app %>/styles/',
                     src: '{,*/}*.css',
-                    dest: '.tmp/styles/'
+                    dest: '<%= config.app %>/styles/'
                 }]
             },
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '.tmp/styles/',
+                    cwd: '<%= config.app %>/styles/',
                     src: '{,*/}*.css',
-                    dest: '.tmp/styles/'
+                    dest: '<%= config.app %>/styles/'
                 }]
             }
         },
@@ -387,8 +405,8 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'wiredep',
-            //'compass:server',
-            //'compass:bootstrap',
+            'compass:server',
+            'compass:bootstrap',
             'concurrent:server',
             'autoprefixer:server',
             'connect:livereload',
@@ -412,18 +430,18 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'wiredep',
-        //'useminPrepare',
+        'useminPrepare',
         'concurrent:dist',
-        //'autoprefixer',
-        //'concat',
-        //'ngAnnotate',
+        'autoprefixer',
+        'concat',
+        'ngAnnotate',
         'copy:dist',
-        //'cdnify',
-        //'cssmin',
-        //'uglify',
-        //'filerev',
-        //'usemin',
-        //'htmlmin'
+        'cdnify',
+        'cssmin',
+        'uglify',
+        'filerev',
+        'usemin',
+        'htmlmin'
     ]);
 
 
