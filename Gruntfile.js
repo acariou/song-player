@@ -10,6 +10,11 @@ module.exports = function (grunt) {
 
     // Define the configuration for all the tasks
     grunt.initConfig({
+        watch:{
+            scripts: {
+                files: ['**.*']
+            }
+        },
         connect: {
             dist:{
                 options: {
@@ -32,7 +37,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('serve', function (target) {
-        grunt.task.run(['connect']);
+        grunt.task.run(['connect','watch']);
     });
 
 

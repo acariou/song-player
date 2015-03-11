@@ -15,21 +15,6 @@
             <audio src="medias/01-rainbowblues.mp3" controls id="audiotrack"></audio>
         </figure>
         <script>
-            var audioPlayer = document.getElementById('audioplayer'),
-                    audioTrack = document.getElementById('audiotrack'),
-                    playButton = document.createElement('button');
-            playButton.type = "button";
-            audioPlayer.appendChild(playButton);
-            audioTrack.removeAttribute('controls');
-
-            function setText(el, text) {
-                el.innerHTML = text;
-            }
-
-            setText(playButton, "Play");
-
-            playButton.addEventListener('click', player);
-
             function player() {
                 if (audioTrack.paused) {
                     setText(playButton, "Pause");
@@ -40,26 +25,33 @@
                 }
             }
 
-            var muteButton = document.createElement("button");
+            function setText(el, text) {
+                el.innerHTML = text;
+            }
 
-            setText(muteButton,"Mute");
-            muteButton.type = "button";
-            audioPlayer.appendChild(muteButton);
+            function finish() {
+                audioTrack.currentTime = 0;
+                setText(playButton, "Play");
+            }
 
-            muteButton.addEventListener("click", muter);
-
-            function muter() {
+            function volumizer() {
                 if (audioTrack.volume == 0) {
-                    setText(this,"Mute");
-                    audioTrack.volume = 1;
+                    setText(muteButton, "Unmute");
                 } else {
-                    setText(this,"Unmute");
-                    audioTrack.volume = 0;
+                    setText(muteButton, "Mute");
                 }
             }
 
-            var volumeSlider = document.createElement('input');
-            volumeSlider.type = 'range';
+            function muter() {
+                if (audioTrack.volume == 0) {
+                    audioTrack.volume = restorValue;
+                    volumeSlider.value = restorValue;
+                } else {
+                    audioTrack.volume = 0;
+                    restorValue = volumeSlider.value;
+                    volumeSlider.value = 0;
+                }
+            }
 
             function setAttributes(el, attrs) {
                 for (var key in attrs) {
@@ -67,11 +59,32 @@
                 }
             }
 
+            var audioPlayer = document.getElementById('audioplayer'),
+                audioTrack = document.getElementById('audiotrack'),
+                playButton = document.createElement('button'),
+                muteButton = document.createElement("button"),
+                volumeSlider = document.createElement("input");
+
+            playButton.type = "button";
+            muteButton.type = "button";
+            volumeSlider.type = 'range';
+            setText(playButton, "Play");
+            setText(muteButton,"Mute");
             setAttributes(volumeSlider, {"type": "range", "min": "0", "max": "1", "step": "any", "value": "1"});
 
+            audioPlayer.appendChild(playButton);
+            audioPlayer.appendChild(muteButton);
+            audioPlayer.appendChild(volumeSlider);
+
+            audioTrack.removeAttribute('controls');
+
+            playButton.addEventListener('click', player, false);
+            muteButton.addEventListener("click", muter, false);
             volumeSlider.addEventListener("input", function(){
                 audioTrack.volume = volumeSlider.value;
-            });
+            }, false);
+            audioTrack.addEventListener('volumechange', volumizer, false);
+            audioTrack.addEventListener('ended', finish, false);
 
         </script>
     </body>
