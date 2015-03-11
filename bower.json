@@ -1,6 +1,9 @@
 {
   "name": "song-player",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "modernizr": "~2.6.2",
+//    "jquery": "~1.11.0"
+  },
   "devDependencies": {}
 }
