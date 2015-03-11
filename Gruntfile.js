@@ -10,59 +10,31 @@ module.exports = function (grunt) {
 
     // Define the configuration for all the tasks
     grunt.initConfig({
-        watch: {
-            js: {
-                files: ['scripts/{,*/}*.js'],
-                options: { livereload: true }
-            },
-            livereload: {
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                },
-                files: ['{,*/}*.html','.tmp/styles/{,*/}*.css','images/{,*/}*']
-            }
-        },
-        // The actual grunt server settings
         connect: {
-            options: {
-                port: 9000,
-                open: true,
-                livereload: 35729,
-                hostname: 'localhost'
-            },
-            livereload: {
+            dist:{
                 options: {
+                    base:__dirname,
+                    port: 9000,
+                    open: true,
+                    livereload: 35729,
+                    hostname: 'localhost',
+                    keepalive: true,
                     middleware: function(connect) {
                         return [
                             connect.static('.tmp'),
-                            connect().use('/bower_components', connect.static('./bower_components')),
-                            connect.static(config.app)
+                            connect().use('/medias', connect.static('./medias')),
+                            connect.static(__dirname)
                         ];
                     }
-                }
-            },
-            dist: {
-                options: {
-                    base: '<%= config.dist %>',
-                    livereload: false
                 }
             }
         }
     });
 
-
     grunt.registerTask('serve', function (target) {
-        if (target === 'dist') {
-            return grunt.task.run(['build', 'connect:dist:keepalive']);
-        }
-
-        grunt.task.run(['concurrent:server','connect:livereload','watch']);
+        grunt.task.run(['connect']);
     });
 
-    grunt.registerTask('server', function (target) {
-        grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-        grunt.task.run([target ? ('serve:' + target) : 'serve']);
-    });
 
-    grunt.registerTask('default', ['test','build']);
+    grunt.registerTask('default', ['serve']);
 };
