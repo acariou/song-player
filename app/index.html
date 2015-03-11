@@ -22,6 +22,57 @@
             audioPlayer.appendChild(playButton);
             audioTrack.removeAttribute('controls');
 
+            function setText(el, text) {
+                el.innerHTML = text;
+            }
+
+            setText(playButton, "Play");
+
+            playButton.addEventListener('click', player);
+
+            function player() {
+                if (audioTrack.paused) {
+                    setText(playButton, "Pause");
+                    audioTrack.play();
+                } else {
+                    setText(playButton, "Play");
+                    audioTrack.pause();
+                }
+            }
+
+            var muteButton = document.createElement("button");
+
+            setText(muteButton,"Mute");
+            muteButton.type = "button";
+            audioPlayer.appendChild(muteButton);
+
+            muteButton.addEventListener("click", muter);
+
+            function muter() {
+                if (audioTrack.volume == 0) {
+                    setText(this,"Mute");
+                    audioTrack.volume = 1;
+                } else {
+                    setText(this,"Unmute");
+                    audioTrack.volume = 0;
+                }
+            }
+
+            var volumeSlider = document.createElement('input');
+            volumeSlider.type = 'range';
+
+            function setAttributes(el, attrs) {
+                for (var key in attrs) {
+                    el.setAttribute(key, attrs[key]);
+                }
+            }
+
+            setAttributes(volumeSlider, {"type": "range", "min": "0", "max": "1", "step": "any", "value": "1"});
+
+            volumeSlider.addEventListener("input", function(){
+                audioTrack.volume = volumeSlider.value;
+            });
+
         </script>
     </body>
 </html>
