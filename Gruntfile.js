@@ -145,6 +145,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 options: {
+                    config: 'config.rb',
                     generatedImagesDir: '<%= config.dist %>/images/generated'
                 }
             },
