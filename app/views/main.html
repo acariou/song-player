@@ -1,23 +1,20 @@
-<p>Actualiser (en secondes) : <input ng-model="refreshInterval"></p>
-
-<h3>Ajouter un nouveau flux</h3>
-
-<form name="newFeed" novalidate>
-    URL : <input size="80" name="url" ng-model="newsFeed.url" type="url" required>
-    <button ng-click="addFeed(newsFeed)">Ajouter un flux</button>
-    <span class="error" ng-show="newFeed.$error.required">Requis !</span>
-    <span class="error" ng-show="newFeed.$error.url">Format d'url invalide !</span>
-</form>
-
-<hr>
-
-<div ng-repeat="feed in feeds">
-    <!--p>{{ feed }}</p-->
-    <ul>
-        <li ng-repeat="item in feed.items"><a href="{{ item.link.href }}">{{ item.title }}</a> </li>
-    </ul>
-    URL : <input size="80" ng-model="feed.url">
-    <button ng-click="fetchFeed(feed)">Actualiser</button>
-    <button ng-click="deleteFeed(feed)">Supprimer</button>
-    <hr/>
-</div>
+<section ng-controlller="MainCtrl">
+    <figure id="audioplayer" itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
+        <figcaption>
+            <div>Track <span itemprop="name">{{ track.name }}</span></div>
+            <div id="album">Album <span itemprop="inAlbum">{{ track.album.name }}</span></div>
+            <div id="artist">Artist <span itemprop="byArtist">{{ track.artist.name }}</span></div>
+            <div id="time">Time<span id="playbacktime">00:00</span></div>
+        </figcaption>
+        <meta itemprop="duration" content="PT2M29S">
+        <div id="fader">
+            <input type="range" min="0" max="1" step="any" value="1" id="volumeSlider" orient="vertical">
+            <button type="button" class="fa fa-volume-off"></button>
+        </div>
+        <div id="playback">
+            <button type="button" ng-click="player">Play</button>
+            <progress min="0" max="100" value="0" id="playhead"></progress>
+        </div>
+        <audio src="medias/01-rainbowblues.mp3" controls id="audiotrack" preload="auto" itemprop="audio"></audio>
+    </figure>
+</section>

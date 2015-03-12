@@ -7,18 +7,8 @@
  * # PlayerCtrl
  * Controller of the songPlayerApp
  */
-angular
-    .module('songPlayerApp')
-    .controller('PlayerCtrl', function ($scope) {
-        $scope.track = {
-            name: 'toto',
-            artist: {
-                name: ''
-            },
-            album: {
-                name: ''
-            }
-        };
+app.controller('playerCtrl', function ($scope) {
+        $scope.track = 'toto';
 
         //function songPlayer(contener,el) {
             //this.contener = contener;
@@ -28,9 +18,6 @@ angular
             //this.fader = document.getElementById("fader");
             //this.playback = document.getElementById("playback");
             //this.playbackTime = document.getElementById("playbacktime");
-            //this.playButton = document.createElement('button');
-            //this.muteButton = document.createElement('button');
-            //this.volumeSlider = document.createElement('input');
             //this.playhead = document.getElementById('playhead');
             //var self = this;
             //this.player = function() {if ( self.audioTrack.paused ) {self._setText(self.playButton, 'Pause');self.audioTrack.play();} else {self._setText(self.playButton, 'Play');self.audioTrack.pause();}};

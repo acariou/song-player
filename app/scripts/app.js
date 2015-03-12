@@ -8,8 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('songPlayerApp', [
+var app = angular.module('songplayerApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,18 +17,11 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/main', {
+]);
+
+app.config(function ($routeProvider) {
+    $routeProvider.when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-        .when('/', {
-            templateUrl: 'views/player.html',
-            controller: 'PlayerCtrl'
-        })
-      .otherwise({
-        redirectTo: '/'
-      });
+    }).otherwise({redirectTo: '/'});
   });

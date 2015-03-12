@@ -30,7 +30,8 @@ module.exports = function (grunt) {
                 tasks: ['newer:jshint:test', 'karma']
             },
             compass: {
-                files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
+                //files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
+                files: ['sass/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer']
             },
             gruntfile: {
@@ -128,21 +129,21 @@ module.exports = function (grunt) {
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
             //dist: {options: {config: 'config.rb'}},
-            options: {
-                sassDir: 'sass',
-                cssDir: '<%= config.app %>/styles',
-                generatedImagesDir: '.tmp/images/generated',
-                imagesDir: '<%= config.app %>/images',
-                javascriptsDir: '<%= config.app %>/scripts',
-                fontsDir: '<%= config.app %>/styles/fonts',
-                importPath: '<%= config.app %>/components',
-                httpImagesPath: '/images',
-                httpGeneratedImagesPath: '/images/generated',
-                httpFontsPath: '/styles/fonts',
-                relativeAssets: false,
-                assetCacheBuster: false,
-                raw: 'Sass::Script::Number.precision = 10\n'
-            },
+            //options: {
+            //    sassDir: 'sass',
+            //    cssDir: '<%= config.app %>/styles',
+            //    generatedImagesDir: '.tmp/images/generated',
+            //    imagesDir: '<%= config.app %>/images',
+            //    javascriptsDir: '<%= config.app %>/scripts',
+            //    fontsDir: '<%= config.app %>/styles/fonts',
+            //    importPath: '<%= config.app %>/components',
+            //    httpImagesPath: '/images',
+            //    httpGeneratedImagesPath: '/images/generated',
+            //    httpFontsPath: '/styles/fonts',
+            //    relativeAssets: false,
+            //    assetCacheBuster: false,
+            //    raw: 'Sass::Script::Number.precision = 10\n'
+            //},
             dist: {
                 options: {
                     config: 'config.rb',
@@ -151,13 +152,8 @@ module.exports = function (grunt) {
             },
             server: {
                 options: {
+                    config: 'config.rb',
                     sourcemap: true
-                }
-            },
-            bootstrap: {
-                options: {
-                    sassDir: '<%= config.app %>/components/bootstrap-sass-official/assets/stylesheets',
-                    cssDir: '<%= config.app %>/styles'
                 }
             }
         },
@@ -407,7 +403,6 @@ module.exports = function (grunt) {
             'clean:server',
             'wiredep',
             'compass:server',
-            'compass:bootstrap',
             'concurrent:server',
             'autoprefixer:server',
             'connect:livereload',
@@ -437,12 +432,12 @@ module.exports = function (grunt) {
         'concat',
         'ngAnnotate',
         'copy:dist',
-        'cdnify',
-        'cssmin',
+        //'cdnify',
+        //'cssmin',
         'uglify',
         'filerev',
         'usemin',
-        'htmlmin'
+        //'htmlmin'
     ]);
 
 
