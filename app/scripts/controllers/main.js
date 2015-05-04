@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the angularsrssApp
  */
-app.controller('MainCtrl', function ($scope, $http, $timeout) {
+app.controller('MainCtrl', ['$scope', function ($scope) {
 
     $scope.track = {
         name: 'lalala',
@@ -18,61 +18,48 @@ app.controller('MainCtrl', function ($scope, $http, $timeout) {
             name: 'tralala'
         }
     };
-    var audioPlayer = angular.element('#audioplayer'),
-        audioTrack = angular.element('#audiotrack'),
-        fader = angular.element('#fader'),
-        playback = angular.element('#playback'),
-        playbackTime = angular.element('#playbacktime'),
-        playhead = angular.element('#playhead'),
-        volumeSlider = angular.element('#volumeSlider'),
+    var audioPlayer = document.getElementById('audioplayer'),
+        audioTrack = document.getElementById('audiotrack'),
+        playButton = angular.element('[data-ctrl="play"]'),
+        fader = document.getElementById('fader'),
+        playback = document.getElementById('playback'),
+        playbackTime = document.getElementById('playbacktime'),
+        playhead = document.getElementById('playhead'),
+        volumeSlider = document.getElementById('volumeSlider'),
         duration = audioTrack.duration,
+        isMute = false,
+        restorValue,
 
         _setText = function (el, text) {
             el.text(text);
-        },
-
-        _setAttributes = function (el, attrs) {
-            for (var key in attrs) {
-                el.setAttribute(key, attrs[key]);
-            }
         };
 
     $scope.player = function() {
         if ( audioTrack.paused ) {
-            _setText(playButton, 'Pause');
+            playButton.removeClass('fa-play').addClass('fa-pause');
             audioTrack.play();
         } else {
-            _setText(playButton, 'Play');
+            playButton.removeClass('fa-pause').addClass('fa-play');
             audioTrack.pause();
         }
     };
-
-    $scope.player = function() {
-        if ( audioTrack.paused ) {
-            _setText(playButton, 'Pause');
-            audioTrack.play();
-        } else {
-            _setText(playButton, 'Play');
-            audioTrack.pause();
-        }
-    };
-
+    // Fonction de d'activation/desactivation du volume
     $scope.muter = function () {
-        if ( audioTrack.volume == 0 ) {
+        if ( audioTrack.volume === 0 ) {
             audioTrack.volume = restorValue;
             volumeSlider.value = restorValue;
         } else {
-            audioTrack.volume = 0;
             restorValue = volumeSlider.value;
+            audioTrack.volume = 0;
             volumeSlider.value = 0;
         }
     };
 
     $scope.volumizer = function () {
         if ( audioTrack.volume === 0 ) {
-            _setText(self.muteButton, 'Unmute');
+            _setText(muteButton, 'Unmute');
         } else {
-            _setText(self.muteButton, 'Mute');
+            _setText(muteButton, 'Mute');
         }
     };
 
@@ -85,15 +72,12 @@ app.controller('MainCtrl', function ($scope, $http, $timeout) {
         playhead.value = audioTrack.currentTime;
         var s = parseInt(audioTrack.currentTime % 60);
         var m = parseInt((audioTrack.currentTime / 60) % 60);
-        s = (s >= 10) ? s : "0" + s;
-        m = (m >= 10) ? m : "0" + m;
+        s = (s >= 10) ? s : '0' + s;
+        m = (m >= 10) ? m : '0' + m;
         playbacktime.innerHTML = m + ':' + s ;
     };
 
     //songPlayer.prototype = {
-    //init: function() {var self = this,;self._create(self.audioPlayer, self.audioTrack);
-    // self.playButton.addEventListener('click', self.player, false);
-    // self.muteButton.addEventListener('click', self.muter, false);
     // self.volumeSlider.addEventListener('input', function(){self.audioTrack.volume = self.volumeSlider.value;}, false);
     // self.audioTrack.addEventListener('volumechange', self.volumizer, false);
     // self.audioTrack.addEventListener('ended', self.finish, false);
@@ -101,4 +85,4 @@ app.controller('MainCtrl', function ($scope, $http, $timeout) {
     // self.audioTrack.addEventListener('timeupdate', self.updatePlayhead, false);},
     //audioTrack.removeAttribute('controls');},
 
-});
+}]);

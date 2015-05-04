@@ -9,10 +9,10 @@
         <meta itemprop="duration" content="PT2M29S">
         <div id="fader">
             <input type="range" min="0" max="1" step="any" value="1" id="volumeSlider" orient="vertical">
-            <button type="button" class="fa fa-volume-off"></button>
+            <button type="button" class="fa fa-volume-up" ng-click="muter()" data-ctrl="btnVolume"></button>
         </div>
         <div id="playback">
-            <button type="button" ng-click="player">Play</button>
+            <button type="button" ng-click="player()" data-ctrl="play" class="fa fa-play"></button>
             <progress min="0" max="100" value="0" id="playhead"></progress>
         </div>
         <audio src="medias/01-rainbowblues.mp3" controls id="audiotrack" preload="auto" itemprop="audio"></audio>

@@ -4,9 +4,7 @@
 @import "bootstrap";
 @import "font-awesome";
 
-* {
-  @include box-sizing(border-box);
-}
+* { @include box-sizing(border-box); }
 
 figure {
   &#audioplayer {
