@@ -8,7 +8,7 @@
  * Controller of the angularsrssApp
  */
 app.controller('MainCtrl', ['$scope', function ($scope) {
-
+    console.log(angular.element);
     $scope.track = {
         name: 'lalala',
         artist: {
