@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+    <channel>
+        <title><![CDATA[Developpez.com JavaScript]]></title>
+        <link>http://javascript.developpez.com/index/rss</link>
+        <description><![CDATA[Club des développeurs et IT Pro]]></description>
+        <pubDate>Mon, 09 Mar 2015 18:38:16 +0100</pubDate>
+        <lastBuildDate>Mon, 09 Mar 2015 18:38:16 +0100</lastBuildDate>
+        <copyright>Copyright © 2000-2015 http://www.developpez.com</copyright>
+        <image>
+            <url>http://www.developpez.com/template/favicon.png</url>
+            <title><![CDATA[Developpez.com JavaScript]]></title>
+            <link>http://javascript.developpez.com/index/rss</link>
+        </image>
+        <generator>http://www.developpez.com</generator>
+        <language>fr-FR</language>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <item>
+            <title><![CDATA[Angular 2 sera basé sur TypeScript : convergence de AtScript et TypeScript 1.5, c'est une collaboration entre Google et Microsoft]]></title>
+            <link>http://typescript.developpez.com/actu/82182/Angular-2-sera-base-sur-TypeScript-convergence-de-AtScript-et-TypeScript-1-5-c-est-une-collaboration-entre-Google-et-Microsoft/</link>
+            <guid>http://typescript.developpez.com/actu/82182/Angular-2-sera-base-sur-TypeScript-convergence-de-AtScript-et-TypeScript-1-5-c-est-une-collaboration-entre-Google-et-Microsoft/</guid>
+            <description><![CDATA[<b>TypeScript servira de langage à AngularJS 2.0</b><br />
+<img src="https://angularjs.org/img/AngularJS-large.png" />
+<img src="http://www.developpez.net/forums/attachments/p156011d1410504996/webmasters-developpement-web-9/javascript-ajax-typescript-dart-2000/typescript-2001/typescript-annonce-nouveau-compilateur/logo-typescript.png/" />
+
+
+<br />
+Lors de la précédente <b><a href="http://www.developpez.net/forums/d1477179/webmasters-developpement-web/javascript-ajax-typescript-dart/javascript/bibliotheques-frameworks/angularjs-2-0-sera-base-typescript-influence-dart/" target="_blank">conférence ng-europe 2014</a></b>, l'équipe Google du framework AngularJS a pu présenter sa feuille de route et notamment l'évolution majeure que représente la version 2.0. Celle-ci présentait un nouveau langage <b><a href="https://docs.google.com/document/d/11YUzC-1d0V1-Q3V0fQ7KSit97HnZoKVygDxpWzEYW0U/preview?pli=1&amp;sle=true#" target="_blank">AtScript</a></b> dont l'objectif était d'étendre la syntaxe du JavaScript actuel pour y ajouter des annotations de type à la manière du langage <b><a href="http://www.developpez.net/forums/d1477435/webmasters-developpement-web/javascript-ajax-typescript-dart/typescript/introduction-langage-typescript-javascriptpp/" target="_blank">TypeScript</a></b> porté par Microsoft.<br/><br/>Au point même que TypeScript était mentionné comme langage...]]></description>
+            <pubDate>Fri, 06 Mar 2015 07:50:00 +0100</pubDate>
+            <comments>http://typescript.developpez.com/actu/82182/Angular-2-sera-base-sur-TypeScript-convergence-de-AtScript-et-TypeScript-1-5-c-est-une-collaboration-entre-Google-et-Microsoft/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/calendrier.gif" type="image/jpeg" length="2226"/>
+        </item>
+        <item>
+            <title><![CDATA[La refactorisation est-elle réellement utile ? Selon une récente étude, il n'y a pas assez de preuves empiriques pour justifier son utilisation]]></title>
+            <link>http://www.developpez.com/actu/82153/La-refactorisation-est-elle-reellement-utile-Selon-une-recente-etude-il-n-y-a-pas-assez-de-preuves-empiriques-pour-justifier-son-utilisation/</link>
+            <guid>http://www.developpez.com/actu/82153/La-refactorisation-est-elle-reellement-utile-Selon-une-recente-etude-il-n-y-a-pas-assez-de-preuves-empiriques-pour-justifier-son-utilisation/</guid>
+            <description><![CDATA[<b>La refactorisation est-elle réellement utile ?</b><br />
+<b>Selon une récente étude, il n'y a pas assez de preuves empiriques pour justifier son utilisation</b><br/><br/>Dans une récente étude publiée dans l' « <i>International Journal of Software Engineering &amp; Applications</i> », deux chercheurs sri lankais ont tenté de mesurer l'impact de la refactorisation sur le code.<br/><br/>Selon la définition de Wikipédia, la refactorisation « <i>consiste à retravailler le code source d'un code informatique sans ajouter de fonctionnalités au logiciel...</i>]]></description>
+            <pubDate>Thu, 05 Mar 2015 10:45:00 +0100</pubDate>
+            <comments>http://www.developpez.com/actu/82153/La-refactorisation-est-elle-reellement-utile-Selon-une-recente-etude-il-n-y-a-pas-assez-de-preuves-empiriques-pour-justifier-son-utilisation/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/discussions.gif" type="image/jpeg" length="1157"/>
+        </item>
+        <item>
+            <title><![CDATA[Java : Oracle publie la mise à jour JDK 8u40, pour améliorer la performance, la gestion de mémoire et le packaging natif]]></title>
+            <link>http://www.developpez.com/actu/82133/Java-Oracle-publie-la-mise-a-jour-JDK-8u40-pour-ameliorer-la-performance-la-gestion-de-memoire-et-le-packaging-natif/</link>
+            <guid>http://www.developpez.com/actu/82133/Java-Oracle-publie-la-mise-a-jour-JDK-8u40-pour-ameliorer-la-performance-la-gestion-de-memoire-et-le-packaging-natif/</guid>
+            <description><![CDATA[<b>Java : Oracle publie la mise à jour JDK 8u40</b><br />
+<b>pour améliorer la performance, la gestion de mémoire et le packaging natif</b><br/><br/>Oracle vient de livrer une nouvelle mise à jour de Java Development Kit 8 (JDK 8u40). Les notes de version de JDK 8u40 annoncent une variété de nouveautés et de changements qui touchent entre autres la gestion de mémoire, les performances, le packaging natif, et le support JavaScript. <br/><br/>Sans apporter de nouvelles fonctionnalités de langage, la dernière mise à jour d'Oracle à JDK...]]></description>
+            <pubDate>Thu, 05 Mar 2015 07:42:00 +0100</pubDate>
+            <comments>http://www.developpez.com/actu/82133/Java-Oracle-publie-la-mise-a-jour-JDK-8u40-pour-ameliorer-la-performance-la-gestion-de-memoire-et-le-packaging-natif/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/java-8.png" type="image/jpeg" length="2886"/>
+        </item>
+        <item>
+            <title><![CDATA[Mozilla expérimente le parallélisme avec son moteur JavaScript SpiderMonkey, pour accélérer la puissance matérielle]]></title>
+            <link>http://www.developpez.com/actu/82097/Mozilla-experimente-le-parallelisme-avec-son-moteur-JavaScript-SpiderMonkey-pour-accelerer-la-puissance-materielle/</link>
+            <guid>http://www.developpez.com/actu/82097/Mozilla-experimente-le-parallelisme-avec-son-moteur-JavaScript-SpiderMonkey-pour-accelerer-la-puissance-materielle/</guid>
+            <description><![CDATA[<b>Mozilla expérimente le parallélisme avec son moteur JavaScript SpiderMonkey</b><br />
+<b>Pour accélérer la puissance matérielle</b><br/><br/>L'éditeur de navigateur Mozilla a récemment partagé sur son blog des actions menées pour expérimenter le parallélisme avec son moteur JavaScript SpiderMonkey. <br/><br/>La firme précise avant tout que le parallélisme auquel elle fait allusion ne fait pas référence à la concurrence relative aux programmes qui répondent aux événements simultanés. « <i>Le modèle de concurrence asynchrone de JavaScript...</i>]]></description>
+            <pubDate>Wed, 04 Mar 2015 08:51:00 +0100</pubDate>
+            <comments>http://www.developpez.com/actu/82097/Mozilla-experimente-le-parallelisme-avec-son-moteur-JavaScript-SpiderMonkey-pour-accelerer-la-puissance-materielle/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/firefox.gif" type="image/jpeg" length="2949"/>
+        </item>
+        <item>
+            <title><![CDATA[Mozilla lance Firefox Developer Edition 64 bits pour Windows, avec plus de fonctionnalités pour son navigateur dédié aux développeurs]]></title>
+            <link>http://www.developpez.com/actu/82045/Mozilla-lance-Firefox-Developer-Edition-64-bits-pour-Windows-avec-plus-de-fonctionnalites-pour-son-navigateur-dedie-aux-developpeurs/</link>
+            <guid>http://www.developpez.com/actu/82045/Mozilla-lance-Firefox-Developer-Edition-64-bits-pour-Windows-avec-plus-de-fonctionnalites-pour-son-navigateur-dedie-aux-developpeurs/</guid>
+            <description><![CDATA[<b>Mozilla lance une version 64 bits de Firefox Developer Edition pour Windows</b><br />
+<b>Avec plus de fonctionnalités pour son navigateur dédié aux développeurs</b><br/><br/>Chose promise, chose due. Après le <a href="http://www.developpez.com/actu/77076/Mozilla-lance-Firefox-Developer-Edition-son-navigateur-dedie-aux-developpeurs/" target="_blank"><u>lancement officiel de son navigateur dédié aux développeurs</u></a> - appelé Firefox Developer Edition - Mozilla met à exécution son plan pour expédier des versions 64 bits de Firefox. L'éditeur de navigateur l'avait promis lors du dixième anniversaire de Firefox en novembre dernier. Et cela se traduit aujourd'hui par Firefox...]]></description>
+            <pubDate>Tue, 03 Mar 2015 13:35:00 +0100</pubDate>
+            <comments>http://www.developpez.com/actu/82045/Mozilla-lance-Firefox-Developer-Edition-64-bits-pour-Windows-avec-plus-de-fonctionnalites-pour-son-navigateur-dedie-aux-developpeurs/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/firefox.gif" type="image/jpeg" length="2949"/>
+        </item>
+        <item>
+            <title><![CDATA[Apprenez les langages HTML5, CSS3 et JavaScript pour créer votre premier site web, critique de Francis Walter]]></title>
+            <link>http://web.developpez.com/livres/index/?page=Conception-generale-de-sites-web#L2746091054</link>
+            <guid>http://web.developpez.com/livres/index/?page=Conception-generale-de-sites-web#L2746091054</guid>
+            <description><![CDATA[<b>Apprenez les langages HTML5, CSS3 et JavaScript<br />
+Pour créer votre premier site web</b><br/><br/><b><a href="http://web.developpez.com/livres/index/?page=Conception-generale-de-sites-web#L2746091054" target="_blank"><img src="http://www.editions-eni.fr/livres-apprenez-les-langages-html5-css3-et-javascript-pour-creer-votre-premier-site-web/.0bf57ea29760b0c971955989a9431b0c.jpg" /></a></b>
+
+
+			Ce livre s'adresse à de grands débutants en développement informatique, <b>qui n'ont jamais programmé</b> avec HTML5, CSS3 et JavaScript. L'auteur guide le lecteur en lui enseignant des <b>méthodes</b> efficaces et <b>actuelles</b> pour créer son premier site web, <b>en partant vraiment de zéro</b> et en allant jusqu'à un niveau suffisant <b>pour qu'il soit ensuite autonome</b>.<br/><br/>Dès le début du livre l'auteur présente un tour d'horizon du...]]></description>
+            <pubDate>Tue, 03 Mar 2015 08:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pointer Events initié par Microsoft devient une recommandation du W3C, Google et Apple vont-ils suivre ce nouveau standard ?]]></title>
+            <link>http://www.developpez.com/actu/81910/Pointer-Events-initie-par-Microsoft-devient-une-recommandation-du-W3C-Google-et-Apple-vont-ils-suivre-ce-nouveau-standard/</link>
+            <guid>http://www.developpez.com/actu/81910/Pointer-Events-initie-par-Microsoft-devient-une-recommandation-du-W3C-Google-et-Apple-vont-ils-suivre-ce-nouveau-standard/</guid>
+            <description><![CDATA[<b>Pointer Events initié par Microsoft devient une recommandation du W3C</b><br />
+<b>Google et Apple vont-ils suivre ce nouveau standard ?</b><br/><br/>Depuis l'apparition des petits équipements à interface tactile, la souris et le clavier n'ont plus l'apanage de la référence en matière d'outils permettant d'agir directement sur le contenu des équipements informatiques. D'autres formes d'entrées telles que la gestuelle ou le stylet ont vu le jour ou du moins leur usage a été fortement renforcé. Aussi, pour encadrer les évènements...]]></description>
+            <pubDate>Fri, 27 Feb 2015 17:44:00 +0100</pubDate>
+            <comments>http://www.developpez.com/actu/81910/Pointer-Events-initie-par-Microsoft-devient-une-recommandation-du-W3C-Google-et-Apple-vont-ils-suivre-ce-nouveau-standard/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/w3c.gif" type="image/jpeg" length="3147"/>
+        </item>
+        <item>
+            <title><![CDATA[La FAQ Google Maps relue et corrigée : découvrez les Q/R adaptées avec les nouveautés de l'API]]></title>
+            <link>http://javascript.developpez.com/actu/81749/La-FAQ-Google-Maps-relue-et-corrigee-decouvrez-les-Q-R-adaptees-avec-les-nouveautes-de-l-API/</link>
+            <guid>http://javascript.developpez.com/actu/81749/La-FAQ-Google-Maps-relue-et-corrigee-decouvrez-les-Q-R-adaptees-avec-les-nouveautes-de-l-API/</guid>
+            <description><![CDATA[Bonjour à tous,<br/><br/>La <b>FAQ Google Maps</b> vient de subir une relecture complète afin d'apporter les corrections nécessaires suite aux évolutions de l'API Google Maps.<br/><br/>Certaines Q/R ont donc été remaniées : ajout de nouvelles propriétés, suppression d'éléments devenus obsolètes, ajout de nouvelles pages d'exemples, etc.<br/><br/>Cette mise à jour est encore une fois due à un important travail de <a href="http://www.developpez.net/forums/u405341/nosmoking/" target="_blank">NoSmoking</a>. <img src="http://www.developpez.net/forums/images/smilies/marcelpoire.gif" border="0" alt="" title=":ave:" class="inlineimg" /><br/><br/><img src="http://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://javascript.developpez.com/faq/google-maps/" target="_blank">FAQ Google Maps</a><br/><br/>Malgré la relecture attentive, il est toujours possible que des erreurs subsistent, n'hésitez...]]></description>
+            <pubDate>Thu, 26 Feb 2015 08:00:00 +0100</pubDate>
+            <comments>http://javascript.developpez.com/actu/81749/La-FAQ-Google-Maps-relue-et-corrigee-decouvrez-les-Q-R-adaptees-avec-les-nouveautes-de-l-API/#comments</comments>
+        </item>
+        <item>
+            <title><![CDATA[Windows 10 : Microsoft intégrera à Chakra le support d'Asm.js, le module de Mozilla permettant à JavaScript d'avoir des performances proches du natif]]></title>
+            <link>http://www.developpez.com/actu/81523/Windows-10-Microsoft-integrera-a-Chakra-le-support-d-Asm-js-le-module-de-Mozilla-permettant-a-JavaScript-d-avoir-des-performances-proches-du-natif/</link>
+            <guid>http://www.developpez.com/actu/81523/Windows-10-Microsoft-integrera-a-Chakra-le-support-d-Asm-js-le-module-de-Mozilla-permettant-a-JavaScript-d-avoir-des-performances-proches-du-natif/</guid>
+            <description><![CDATA[<b>Windows 10 : Microsoft intégrera à Chakra le support d'Asm.js</b><br />
+<b>le module de Mozilla permettant à JavaScript d'avoir des performances proches du natif </b><br/><br/>Microsoft compte accélérer les performances de JavaScript dans la prochaine version de son système d'exploitation grâce à une prise en charge d'asm.js.<br/><br/>JavaScript est devenu le langage par excellence du Web. Il a été largement adopté par de nombreux développeurs, devant ainsi l'un des langages les plus populaires au monde, selon les indices Tiobe et...]]></description>
+            <pubDate>Thu, 19 Feb 2015 12:46:00 +0100</pubDate>
+            <comments>http://www.developpez.com/actu/81523/Windows-10-Microsoft-integrera-a-Chakra-le-support-d-Asm-js-le-module-de-Mozilla-permettant-a-JavaScript-d-avoir-des-performances-proches-du-natif/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/js.gif" type="image/jpeg" length="3290"/>
+        </item>
+        <item>
+            <title><![CDATA[Joyent annonce la création de la fondation Node.js en partenariat avec la fondation Linux, vers une réconciliation avec io.js ?]]></title>
+            <link>http://www.developpez.com/actu/81304/La-fondation-Node-js-lancee-pour-se-reconcilier-avec-Io-js/</link>
+            <guid>http://www.developpez.com/actu/81304/La-fondation-Node-js-lancee-pour-se-reconcilier-avec-Io-js/</guid>
+            <description><![CDATA[<b>Joyent annonce la création de la fondation Node.js en partenariat avec la fondation Linux </b><br />
+<b>vers une réconciliation avec io.js ?</b><br/><br/>À l'image de l'humanité et du foisonnement de son esprit, les technologies informatiques sont en perpétuelle évolution, à défaut de cela, elles se meurent lentement et sont remplacées par d'autres. Si Node.js demeure une technologie du web incontournable, il n'en demeure pas moins qu'elle n'est pas à l'abri d'un tel scénario, une inquiétude partagée par le principal sponsor...]]></description>
+            <pubDate>Thu, 12 Feb 2015 12:01:00 +0100</pubDate>
+            <comments>http://www.developpez.com/actu/81304/La-fondation-Node-js-lancee-pour-se-reconcilier-avec-Io-js/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/nodejs-2.gif" type="image/jpeg" length="2894"/>
+        </item>
+        <item>
+            <title><![CDATA[Créer un seul site pour toutes les plates-formes - Aux sources des approches responsive et adaptative, critique par Kaamo]]></title>
+            <link>http://web.developpez.com/livres/index/?page=Conception-generale-de-sites-web#L2212139861</link>
+            <guid>http://web.developpez.com/livres/index/?page=Conception-generale-de-sites-web#L2212139861</guid>
+            <description><![CDATA[<b>Créer un seul site pour toutes les plates-formes<br />
+Aux sources des approches responsive et adaptative</b><br/><br/><b><a href="http://web.developpez.com/livres/index/?page=Conception-generale-de-sites-web#L2212139861" target="_blank"><img src="http://images-eu.amazon.com/images/P/2212139861.08.LZZZZZZZ.jpg" /></a></b>
+
+
+			<b>Le Graal du développeur web : un seul site pour toutes les plates-formes.</b><br/><br/>Pourquoi développer plusieurs versions d'un site web pour les mobiles, les ordinateurs (portable ou de bureau), voire des applications dédiées ? Il est possible de concilier les usages autour d'un seul site et d'une seule URL : c'est ce que propose l'approche One Web, en respect avec les standards du Web.<br/><br/>Avec cette...]]></description>
+            <pubDate>Thu, 12 Feb 2015 08:00:00 +0100</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Migrer une application AngularJS en TypeScript, un article de Keir Lawson traduit par yahiko]]></title>
+            <link>http://yahiko.developpez.com/tutoriels/typescript-migration-angular/</link>
+            <guid>http://yahiko.developpez.com/tutoriels/typescript-migration-angular/</guid>
+            <description><![CDATA[Bonjour à tous !<br/><br/><img src="http://www.developpez.net/forums/attachments/p156011d1410504996/webmasters-developpement-web-9/javascript-ajax-typescript-dart-2000/typescript-2001/typescript-annonce-nouveau-compilateur/logo-typescript.png/" /><br />
+Je vous propose la traduction d'un article qui décrit les principales étapes pour migrer de JavaScript en TypeScript une application écrite avec le framework <b>AngularJS</b>.<br/><br/><img src="http://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <b><a href="http://yahiko.developpez.com/tutoriels/typescript-migration-angular/" target="_blank">Migrer une application AngularJS en TypeScript</a></b><br/><br/>N'hésitez pas à faire part de vos remarques, commentaires ou propositions d'améliorations !<br/><br/><img src="http://www.developpez.net/forums/images/smilies/merci.png" border="0" alt="" title=":merci:" class="inlineimg" />]]></description>
+            <pubDate>Tue, 10 Feb 2015 08:00:00 +0100</pubDate>
+            <enclosure url="http://www.developpez.com/images/logos/typescript-prev.png" type="image/jpeg" length="2840"/>
+        </item>
+        <item>
+            <title><![CDATA[dhtmlxScheduler 4.3 : amélioration de l'affichage des jours pour le planificateur du framework JavaScript DHTMLX]]></title>
+            <link>http://ajax.developpez.com/actu/81088/dhtmlxScheduler-4-3-amelioration-de-l-affichage-des-jours-pour-le-planificateur-du-framework-JavaScript-DHTMLX/</link>
+            <guid>http://ajax.developpez.com/actu/81088/dhtmlxScheduler-4-3-amelioration-de-l-affichage-des-jours-pour-le-planificateur-du-framework-JavaScript-DHTMLX/</guid>
+            <description><![CDATA[<b>Sortie de dhtmlxScheduler 4.3 : amélioration de l'affichage des jours</b><br />
+<b>pour le planificateur du framework JavaScript DHTMLX</b><br/><br/><img src="http://www.dhtmlx.com/images/logo_scheduler.gif" /><br />
+L'équipe de développement de la bibliothèque <b>DHTMLX </b>vient d'annoncer sur leur blog, la sortie en <b>version 4.3</b> du composant <b>dhtmlxScheduler </b>, composant <b>AJAX </b>de type calendrier permettant l'intégration dans une application Web d'un gestionnaire d'évènements,  sous la forme d'un agenda Web. Cette version se caractérise par un grand nombre d'améliorations et de corrections de bug,...]]></description>
+            <pubDate>Sun, 08 Feb 2015 10:15:00 +0100</pubDate>
+            <comments>http://ajax.developpez.com/actu/81088/dhtmlxScheduler-4-3-amelioration-de-l-affichage-des-jours-pour-le-planificateur-du-framework-JavaScript-DHTMLX/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/dhtmlx.png" type="image/jpeg" length="2642"/>
+        </item>
+        <item>
+            <title><![CDATA[dhtmlxVault 2.4 : télécharger des fichiers avec l'outil d'upload de fichiers du framework JavaScript DHTMLX]]></title>
+            <link>http://ajax.developpez.com/actu/81087/dhtmlxVault-2-4-telecharger-des-fichiers-avec-l-outil-d-upload-de-fichiers-du-framework-JavaScript-DHTMLX/</link>
+            <guid>http://ajax.developpez.com/actu/81087/dhtmlxVault-2-4-telecharger-des-fichiers-avec-l-outil-d-upload-de-fichiers-du-framework-JavaScript-DHTMLX/</guid>
+            <description><![CDATA[<b>Sortie de dhtmlxVault 2.4 : télécharger des fichiers</b><br />
+<b>Pour l'outil d'upload de fichiers du framework JavaScript DHTMLX</b><br/><br/><img src="http://dhtmlx.com/images/logo_vault.gif" />L'équipe de développement de la bibliothèque <b>DHTMLX </b>vient d'annoncer la sortie en <b>version 2.4</b> de son composant <b>AJAX</b> destiné à la gestion des <b>uploads</b> dans une application Web : le composant <b>dhtmlxVault</b>.Dans cette nouvelle version, nous avons un ensemble de nouvelles fonctionnalités qui répondent en majorités aux principales sollicitations des développeurs.  En effet, d'après les responsables...]]></description>
+            <pubDate>Sun, 08 Feb 2015 10:09:00 +0100</pubDate>
+            <comments>http://ajax.developpez.com/actu/81087/dhtmlxVault-2-4-telecharger-des-fichiers-avec-l-outil-d-upload-de-fichiers-du-framework-JavaScript-DHTMLX/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/dhtmlx.png" type="image/jpeg" length="2642"/>
+        </item>
+        <item>
+            <title><![CDATA[io.js 1.1.0 : la plateforme JavaScript continue de forger son identité et se différencie petit à petit de Node.js]]></title>
+            <link>http://javascript.developpez.com/actu/81065/io-js-1-1-0-la-plateforme-JavaScript-continue-de-forger-son-identite-et-se-differencie-petit-a-petit-de-Node-js/</link>
+            <guid>http://javascript.developpez.com/actu/81065/io-js-1-1-0-la-plateforme-JavaScript-continue-de-forger-son-identite-et-se-differencie-petit-a-petit-de-Node-js/</guid>
+            <description><![CDATA[<b><b>io.js 1.1.0 : la plateforme continue de forger son identité</b><br />
+Et se différencie petit à petit de Node.js</b><br/><br/><img src="http://www.developpez.net/forums/attachments/p168290d1/a/a/a" /><br />
+<b>io.js</b> est une plateforme JavaScript construite sur base de Node.js. Elle est comptabile avec l'écosystème npm et avec le moteur V8 qui implémente de nombreuses fonctionnalités de la spécification ECMAscript 6.<br/><br/>Sa version 1.0 a été décrite ici : <a href="http://www.developpez.net/forums/d1486120-2/webmasters-developpement-web/javascript-ajax-typescript-dart/javascript/javascript-cote-serveur/node-js-forke-donner-naissance-io-js/" target="_blank">Io.js : le fork de Node.js sort en version bêta</a>. Cette version (première version majeure) est considérée comme suffisamment détachée de sa base Node.js.<br/><br/>La...]]></description>
+            <pubDate>Sat, 07 Feb 2015 08:00:00 +0100</pubDate>
+            <comments>http://javascript.developpez.com/actu/81065/io-js-1-1-0-la-plateforme-JavaScript-continue-de-forger-son-identite-et-se-differencie-petit-a-petit-de-Node-js/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/js.gif" type="image/jpeg" length="3290"/>
+        </item>
+        <item>
+            <title><![CDATA[CKEditor 4.4.7 : amélioration de la gestion des erreurs pour l'éditeur WYSIWYG]]></title>
+            <link>http://javascript.developpez.com/actu/81060/CKEditor-4-4-7-amelioration-de-la-gestion-des-erreurs-pour-l-editeur-WYSIWYG/</link>
+            <guid>http://javascript.developpez.com/actu/81060/CKEditor-4-4-7-amelioration-de-la-gestion-des-erreurs-pour-l-editeur-WYSIWYG/</guid>
+            <description><![CDATA[<b>CKEditor 4.4.0 : l'éditeur de texte WYSIWYG pour vos pages Web</b><br />
+<b>L'outil utilise une API JavaScript performante et offre un panel de fonctionnalités</b><br/><br/><img src="http://a.cksource.com/e/1/img/logo-ckeditor-h100.png" /><br />
+<b>CKEditor</b> est un éditeur de texte HTML prêt à l'emploi conçu pour simplifier la création de contenu Web. C'est un éditeur WYSIWYG (<i>What You See Is What You Get</i>) qui apporte des caractéristiques communes de traitement de texte directement sur vos pages Web. <br/><br/>C'est une application open source. Ce qui signifie qu'elle peut être modifiée comme vous le souhaitez....]]></description>
+            <pubDate>Sat, 07 Feb 2015 07:00:00 +0100</pubDate>
+            <comments>http://javascript.developpez.com/actu/81060/CKEditor-4-4-7-amelioration-de-la-gestion-des-erreurs-pour-l-editeur-WYSIWYG/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/ckeditor.png" type="image/jpeg" length="3833"/>
+        </item>
+        <item>
+            <title><![CDATA[CoffeeScript 1.9.0 : améliorations continues afin de supporter ES6, pour ce langage qui se compile en JavaScript]]></title>
+            <link>http://javascript.developpez.com/actu/81059/CoffeeScript-1-9-0-ameliorations-continues-afin-de-supporter-ES6-pour-ce-langage-qui-se-compile-en-JavaScript/</link>
+            <guid>http://javascript.developpez.com/actu/81059/CoffeeScript-1-9-0-ameliorations-continues-afin-de-supporter-ES6-pour-ce-langage-qui-se-compile-en-JavaScript/</guid>
+            <description><![CDATA[<b>Sortie de CoffeeScript 1.9.0</b><br />
+<b>Améliorations continues pour supporter ES6</b><br/><br/><img src="http://coffeescript.org/documentation/images/logo.png" /><br />
+CoffeeScript est un petit langage qui se compile en JavaScript (il n'y a pas d'interprétation lors de l'exécution). Il met l'accent sur les bonnes pratiques de JavaScript et ce de manière simple tout en réduisant le nombre de lignes de code.<br/><br/>L'équipe vient d'annoncer la sortie de la <b>version 1.9.0</b> dans laquelle nous trouvons plusieurs choses :<br/><br/><ul><li style="">le support des générateurs ES6 ;</li><li style="">un meilleur parsing et l'amélioration des messages...</li></ul>]]></description>
+            <pubDate>Fri, 06 Feb 2015 14:15:00 +0100</pubDate>
+            <comments>http://javascript.developpez.com/actu/81059/CoffeeScript-1-9-0-ameliorations-continues-afin-de-supporter-ES6-pour-ce-langage-qui-se-compile-en-JavaScript/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/coffeescript-2.gif" type="image/jpeg" length="4222"/>
+        </item>
+        <item>
+            <title><![CDATA[Node 0.10.36 est disponible, l'équipe continue les corrections au compte goutte]]></title>
+            <link>http://javascript.developpez.com/actu/81058/Node-0-10-36-est-disponible-l-equipe-continue-les-corrections-au-compte-goutte/</link>
+            <guid>http://javascript.developpez.com/actu/81058/Node-0-10-36-est-disponible-l-equipe-continue-les-corrections-au-compte-goutte/</guid>
+            <description><![CDATA[<b>Node 0.10 est disponible</b><br />
+<b>Nouvelle API, consolidation et performance améliorée</b><br/><br/><img src="http://nodejs.org/images/logos/nodejs-dark.png" /><br />
+L'équipe de Node vient d'annoncer la sortie de la version 0.10. Cette branche apporte des améliorations significatives à de nombreux domaines, en mettant l'accent sur l'API, la facilité d'utilisation et la rétrocompatibilité.<br/><br/>Vous trouverez <a href="https://github.com/joyent/node/wiki/Api-changes-between-v0.8-and-v0.10" target="_blank">ici</a> un résumé des changements apportés depuis la version 0.8.<br/><br/>Notons par exemple la nouvelle API de flux, <b>Streams2</b>, qui réduirait le code nécessaire. Il y a aussi des nouvelles classes...]]></description>
+            <pubDate>Fri, 06 Feb 2015 13:55:00 +0100</pubDate>
+            <comments>http://javascript.developpez.com/actu/81058/Node-0-10-36-est-disponible-l-equipe-continue-les-corrections-au-compte-goutte/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/nodejs.gif" type="image/jpeg" length="2840"/>
+        </item>
+        <item>
+            <title><![CDATA[Redmonk : Swift progresse de façon spectaculaire, Go également, JavaScript et Java au coude à coude pour la première place]]></title>
+            <link>http://www.developpez.com/actu/81044/Redmonk-Swift-progresse-de-facon-spectaculaire-Go-egalement-JavaScript-et-Java-au-coude-a-coude-pour-la-premiere-place/</link>
+            <guid>http://www.developpez.com/actu/81044/Redmonk-Swift-progresse-de-facon-spectaculaire-Go-egalement-JavaScript-et-Java-au-coude-a-coude-pour-la-premiere-place/</guid>
+            <description><![CDATA[<b>Redmonk : Swift progresse de façon spectaculaire, Go également</b><br />
+<b>JavaScript et Java au coude à coude pour la première place</b><br/><br/>Le langage JavaScript a gagné en popularité au courant de l'année 2014. Cette tendance a été confirmée par l'Index Tiobe, qui a également  couronné le langage de script en 2014, grâce à la grosse progression qu'elle a enregistrée au cours de cette période.<br/><br/>L'indice Redmonk s'aligne derrière Tiobe, et va encore plus loin en faisant de JavaScript le langage de programmation le plus...]]></description>
+            <pubDate>Fri, 06 Feb 2015 11:29:00 +0100</pubDate>
+            <comments>http://www.developpez.com/actu/81044/Redmonk-Swift-progresse-de-facon-spectaculaire-Go-egalement-JavaScript-et-Java-au-coude-a-coude-pour-la-premiere-place/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/sondage2.gif" type="image/jpeg" length="1920"/>
+        </item>
+        <item>
+            <title><![CDATA[Résultat du sondage sur l'utilisation de TypeScript par les développeurs, sondage effectué afin d'améliorer les outils et le langage]]></title>
+            <link>http://web.developpez.com/actu/80957/Resultat-du-sondage-sur-l-utilisation-de-TypeScript-par-les-developpeurs-sondage-effectue-afin-d-ameliorer-les-outils-et-le-langage/</link>
+            <guid>http://web.developpez.com/actu/80957/Resultat-du-sondage-sur-l-utilisation-de-TypeScript-par-les-developpeurs-sondage-effectue-afin-d-ameliorer-les-outils-et-le-langage/</guid>
+            <description><![CDATA[Questionnaire TypeScript pour les développeurs<br/><br/>L'équipe TypeScript de Microsoft vient de publier un <b><a href="http://www.instant.ly/s/mj1X3/nav?sessionId=8gsB11vW5LvVWW5RstptDHEe#p/186a0" target="_blank">questionnaire</a></b> sur l'utilisation de TypeScript par la communauté des développeurs.<br/><br/>Si vous en faites partie, n'hésitez pas à répondre aux six questions. Cela prend moins d'une minute.<br/><br/><img src="http://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <b><a href="http://www.instant.ly/s/mj1X3/nav?sessionId=8gsB11vW5LvVWW5RstptDHEe#p/186a0" target="_blank">TypeScript Developper Survey</a></b>]]></description>
+            <pubDate>Wed, 04 Feb 2015 11:50:00 +0100</pubDate>
+            <comments>http://web.developpez.com/actu/80957/Resultat-du-sondage-sur-l-utilisation-de-TypeScript-par-les-developpeurs-sondage-effectue-afin-d-ameliorer-les-outils-et-le-langage/#comments</comments>
+            <enclosure url="http://www.developpez.com/images/logos/typescript-prev.png" type="image/jpeg" length="2840"/>
+        </item>
+    </channel>
+</rss>
