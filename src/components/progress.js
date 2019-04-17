@@ -3,7 +3,7 @@ import React from 'react';
 class Progress extends React.Component {
 
   render() {
-    return(
+    return (
       <div className="progress">
         <span className="player__time-elapsed">{this.props.elapsed}</span>
         <progress

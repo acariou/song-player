@@ -1,6 +1,6 @@
-import { ClientFunction, Selector } from 'testcafe';
-import { ReactSelector, waitForReact } from 'testcafe-react-selectors';
-import { getPageUrl } from './helpers';
+import {ClientFunction, Selector} from 'testcafe';
+import {ReactSelector, waitForReact} from 'testcafe-react-selectors';
+import {getPageUrl} from './helpers';
 
 const getPageTitle = ClientFunction(() => document.title);
 const counterSelector = Selector('[data-tid="counter"]');
@@ -13,7 +13,7 @@ const oddButton = buttonsSelector.nth(2);
 const asyncButton = buttonsSelector.nth(3);
 const getCounterText = () => counterSelector().innerText;
 const assertNoConsoleErrors = async t => {
-  const { error } = await t.getBrowserConsoleMessages();
+  const {error} = await t.getBrowserConsoleMessages();
   await t.expect(error).eql([]);
 };
 

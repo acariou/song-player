@@ -12,7 +12,7 @@ import fs from 'fs';
 import webpack from 'webpack';
 import chalk from 'chalk';
 import merge from 'webpack-merge';
-import { spawn, execSync } from 'child_process';
+import {spawn, execSync} from 'child_process';
 import baseConfig from './webpack.config.base';
 import CheckNodeEnv from '../internals/scripts/CheckNodeEnv';
 
@@ -200,10 +200,10 @@ export default merge.smart(baseConfig, {
     requiredByDLLConfig
       ? null
       : new webpack.DllReferencePlugin({
-          context: path.join(__dirname, '..', 'dll'),
-          manifest: require(manifest),
-          sourceType: 'var'
-        }),
+        context: path.join(__dirname, '..', 'dll'),
+        manifest: require(manifest),
+        sourceType: 'var'
+      }),
 
     new webpack.HotModuleReplacementPlugin({
       multiStep: true
@@ -246,7 +246,7 @@ export default merge.smart(baseConfig, {
     inline: true,
     lazy: false,
     hot: true,
-    headers: { 'Access-Control-Allow-Origin': '*' },
+    headers: {'Access-Control-Allow-Origin': '*'},
     contentBase: path.join(__dirname, 'dist'),
     watchOptions: {
       aggregateTimeout: 300,

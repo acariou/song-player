@@ -1,15 +1,16 @@
 // @flow
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import data from '../constants/tracks.json';
 
-type Props = {};
+type
+Props = {};
 
 export default class TrackList extends Component<Props> {
   props: Props;
 
   constructor(props) {
     super(props);
-    this.state = { tracks: [] };
+    this.state = {tracks: []};
     this.renderListItem = this.renderListItem.bind(this);
   }
 
@@ -30,7 +31,7 @@ export default class TrackList extends Component<Props> {
 
   componentDidMount() {
     //fetch data for a track here (i.e. from Spotify or Soundcloud)s
-    this.setState({ tracks: data.tracks });
+    this.setState({tracks: data.tracks});
   }
 
   renderListItem(track, i) {

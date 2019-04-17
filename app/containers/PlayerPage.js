@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Controls from '../components/Controls/Controls';
 import TrackList from '../components/TrackList';
 import data from '../constants/tracks.json';
@@ -27,7 +27,7 @@ export default class PlayerPage extends Component {
 
   selectTrackNumber(trackId) {
     this.setState(
-      { currentTrackIndex: trackId, playing: true },
+      {currentTrackIndex: trackId, playing: true},
       this.playAudio
     );
   }
@@ -47,7 +47,7 @@ export default class PlayerPage extends Component {
         }, this.playAudio);
         break;
       case 'pause':
-        this.setState({ playing: false }, this.pauseAudio);
+        this.setState({playing: false}, this.pauseAudio);
         break;
       case 'prev':
         this.setState((state, props) => {
@@ -55,7 +55,7 @@ export default class PlayerPage extends Component {
           if (currentIndex <= 0) {
             return null;
           } else {
-            return { playing:true, currentTrackIndex: currentIndex };
+            return {playing: true, currentTrackIndex: currentIndex};
           }
         }, this.playAudio);
         break;
@@ -65,7 +65,7 @@ export default class PlayerPage extends Component {
           if (currentIndex > data.tracks.length) {
             return null;
           } else {
-            return { playing:true, currentTrackIndex: currentIndex };
+            return {playing: true, currentTrackIndex: currentIndex};
           }
         }, this.playAudio);
         break;
@@ -77,11 +77,13 @@ export default class PlayerPage extends Component {
   render() {
     return (
       <div className="App">
-        <div className="Artwork" style={{ backgroundImage: `url(${data.artwork})` }}>
-          <Controls onClick={this.handleClick} playing={this.state.playing} />
-          <audio ref={(audio)=>{this.audioElement = audio}} src={"/songs/"+this.state.currentTrackIndex+".mp3"}/>
+        <div className="Artwork" style={{backgroundImage: `url(${data.artwork})`}}>
+          <Controls onClick={this.handleClick} playing={this.state.playing}/>
+          <audio ref={(audio) => {
+            this.audioElement = audio
+          }} src={"/songs/" + this.state.currentTrackIndex + ".mp3"}/>
         </div>
-        <TrackList currentTrackIndex={this.state.currentTrackIndex} selectTrackNumber={this.selectTrackNumber} />
+        <TrackList currentTrackIndex={this.state.currentTrackIndex} selectTrackNumber={this.selectTrackNumber}/>
         <div className="MusicCredit">Music: <a href="https://www.bensound.com">https://www.bensound.com</a></div>
       </div>
     );

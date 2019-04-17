@@ -3,11 +3,11 @@ import logo from './logo.png';
 import soundcloud from './soundcloud.png';
 
 class Footer extends React.Component {
-  render(){
-    return(
+  render() {
+    return (
       <div className="footer">
-        <p>Love from <img src={logo} className="logo" alt="" />
-          & <img src={soundcloud} className="soundcloud" alt="" />
+        <p>Love from <img src={logo} className="logo" alt=""/>
+          & <img src={soundcloud} className="soundcloud" alt=""/>
         </p>
       </div>
     )
