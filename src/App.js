@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Search from './Components/Search';
 import Details from './Components/Details';
 import Player from './Components/Player';
@@ -9,7 +9,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Search/>
+      <Search tracks={['']}/>
       <Details title={'Track title'}/>
       <Player/>
       <Progress position={'0.3'} elapsed={'00:00'} total={'0:40'}/>
